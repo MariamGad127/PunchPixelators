@@ -1,0 +1,12 @@
+# Import the 'run' function from the 'subprocess' module to execute shell commands
+from subprocess import run
+
+# Install Ultralytics using pip
+run(["pip", "install", "ultralytics"])
+
+# Specify the file paths for the YOLO model and the input video
+model_path = r"C:\Studying\Robotics\OpenCV\best.pt"
+video_path = r"C:\Studying\Robotics\OpenCV\OPEN_CV.mp4"
+
+# Run YOLO for object detection on the specified video using the provided model
+run(["yolo", "detect", "predict", f"model={model_path}", f"source={video_path}"])
